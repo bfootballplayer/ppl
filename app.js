@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.2';
+const APP_VERSION = '1.3';
 const KEY_DATA = 'ppl.data.v1';
 const KEY_ACTIVE = 'ppl.active.v1';
 const DAY = 86400000;

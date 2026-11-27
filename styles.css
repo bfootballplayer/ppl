@@ -31,6 +31,10 @@ body {
   font: 16px/1.4 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
   padding-top: var(--safe-t);
   padding-bottom: calc(var(--tabbar-h) + var(--timer-h) + var(--safe-b) + 24px);
+  /* iOS в режиме «На экран Домой» по-разному считает высоту экрана для коротких и длинных страниц,
+     и нижний бар прыгает при смене вкладок. Страница не короче экрана — бар стоит на месте. */
+  min-height: 100vh;
+  min-height: 100lvh;
   overscroll-behavior-y: none;
   -webkit-user-select: none;
   user-select: none;
