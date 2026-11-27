@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PPL</title>
+  <meta name="theme-color" content="#0e0f12">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="PPL">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="view"></main>
+
+  <div id="timer" class="timer" hidden>
+    <div class="timer-fill" id="timer-fill"></div>
+    <div class="timer-row">
+      <div class="timer-label">
+        <span class="timer-caption">Отдых</span>
+        <span class="timer-time" id="timer-time">0:00</span>
+      </div>
+      <button class="tbtn" data-act="timer-add" data-sec="-15">−15</button>
+      <button class="tbtn" data-act="timer-add" data-sec="15">+15</button>
+      <button class="tbtn tbtn-main" data-act="timer-stop">Пропустить</button>
+    </div>
+  </div>
+
+  <nav class="tabbar" id="tabbar">
+    <button data-tab="train">
+      <svg viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></svg>
+      <span>Тренировка</span>
+    </button>
+    <button data-tab="history">
+      <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+      <span>История</span>
+    </button>
+    <button data-tab="progress">
+      <svg viewBox="0 0 24 24"><path d="M3.5 19.5h17M5.5 15l4.5-4.5 3.5 3.5 6-6.5"/></svg>
+      <span>Прогресс</span>
+    </button>
+    <button data-tab="program">
+      <svg viewBox="0 0 24 24"><path d="M8 6.5h12M8 12h12M8 17.5h12M4 6.5h.01M4 12h.01M4 17.5h.01"/></svg>
+      <span>Программа</span>
+    </button>
+  </nav>
+
+  <div id="sheet-root"></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
